@@ -1,13 +1,14 @@
-void swap_max(int arr[], int len, int index){ 
+void swap_max(int arr[], int len, int index){
+  int flag = 0; 
  int max = index;
    for(int i = index ; i < len; i++){
      if( arr[i] > arr[max] ){
        max = i;
       }
     }
-     
+     flag = arr[max];
      arr[max] = arr[index];
-    
+     arr[index] = flag;
   
    }
 
